@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.icono {
+    animation: moverizquierda 1s ease-in;
+    z-index: 100;
+}
+
+header {
+    background: #74ebd5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    padding: 40px;
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+img {
+    display: block;
+    height: 250px;
+    object-fit: cover;
+    width: auto;
+    animation: arriba 1s ease-in;
+}
+
+.textos {
+    width: 60%;
+    color: #ffffff;
+}
+
+.textos h1 {
+    font-size: 30px;
+    animation: moverderecha 1s ease-in;
+}
+
+.textos h2 {
+    font-size: 18px;
+    animation: moverizquierda 1s ease-in;
+}
+
+.textos a {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #ffffff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.wave {
+    height: 100px;
+    width: 100%;
+    background: #74ebd5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.enlaces {
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: #000;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #2193b0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.uno {
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+
+}
+
+.dos {
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+
+}
+
+@keyframes moverizquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes arriba {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverderecha {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    img {
+        height: 220px;
+
+    }
+
+    .textos h1 {
+        font-size: 27px;
+    }
+
+    .textos h2 {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .parrafo {
+        font-size: 17px;
+    }
+
+    .titulo-left {
+        font-size: 22px;
+    }
+
+    img {
+        height: 150px;
+
+    }
+
+    .textos h1 {
+        font-size: 20px;
+    }
+
+    .textos h2 {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .parrafo {
+        font-size: 14px;
+    }
+
+    .titulo-left {
+        font-size: 20px;
+    }
+
+    img {
+        height: 100px;
+
+    }
+
+    .textos h1 {
+        font-size: 17px;
+    }
+
+    .textos h2 {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .parrafo {
+        font-size: 12px;
+    }
+
+    .titulo-left {
+        font-size: 18px;
+    }
+
+
+    .container {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        height: 90px;
+
+    }
+
+    .textos h1 {
+        font-size: 15px;
+    }
+
+    .textos h2 {
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+    .parrafo {
+        font-size: 10px;
+    }
+
+    .titulo-left {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        height: 80px;
+
+    }
+
+    .textos h1 {
+        font-size: 13px;
+    }
+
+    .textos h2 {
+        font-size: 6px;
+    }
+}
+
+.wave-contenedor-website {
+    font-size: 20px;
+    background-color: #ffffff;
+    height: 80px;
+    animation: arriba 1s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.contenedor-textos-main {
+    font-size: 24px;
+    text-align: left;
+    color: #2193b0;
+    animation: arriba 1s ease-in;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.parrafo {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    text-align: left;
+    font-size: 18px;
+}
+
+.titulo-left {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    font-size: 24px;
+}
+
+.contenedortabla {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tabla {
+    width: 20%;
+    height: 550px;
+    margin: auto;
+    border: 1px solid #343759;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px #343759;
+    text-align: center;
+    flex-grow: 1;
+    color: #343759;
+}
+
+.tabla>h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.tabla img {
+    width: 64px;
+    margin-bottom: 35px;
+}
+
+.tabla>h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tabla>p {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.tabla:hover {
+    background: #343759;
+    color: #f1f1f2;
+    transition: .5s all;
+    transform: scale(1.1);
+    cursor: pointer;
+}
